@@ -1,0 +1,228 @@
+<!-- Navigation -->
+<html>
+<head>
+
+<link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
+
+<link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.bundle.js"></script>
+<script src="js/bootstrap.js"></script>
+
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<meta name="HandheldFriendly" content="true">
+
+
+</head>
+<body>
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top" style="margin:0px; padding:0px;">
+  <div class="container">
+    <a class="navbar-brand" href="#" style="margin:0.5rem; padding:0px;">
+          <img src="images/logo.png"  height="70" width="300" alt="Logo" >
+        </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto" style="font-weight:bold;">
+        <li class="nav-item active" id="homeLi">
+          <a class="nav-link" id="home" href="#">Home
+                
+              </a>
+        </li>
+        <li class="nav-item" id="aboutLi">
+          <a class="nav-link"  id="about" href="#">About</a>
+        </li>
+        <li class="nav-item" id="managLi">
+          <a class="nav-link"  id="manag" href="#">Management</a>
+        </li>
+        <li class="nav-item" id="landLi"> 
+          <a class="nav-link"  id="land" href="#">Land Information</a>
+        </li>
+        
+        <li class="nav-item" id="contactLi">
+          <a class="nav-link"  id="contact" href="#">Contact Us</a>
+        </li>
+          <li class="nav-item" id="loginLi">
+          <a class="nav-link"  id="login" href="#" style="color:yellow;">Member Login</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<script>
+
+console.log("loaded nav js ");
+$("nav.navbar   > div.container > div.collapse > ul.navbar-nav > li.nav-item  > a#home.nav-link").click(function() {
+  
+  console.log("started click");
+  $("div#main > div.columnsContainer > div.leftColumn").load("home.html");
+
+  $("nav.navbar   > div.container > div.collapse > ul.navbar-nav > li#homeLi.nav-item ").addClass("active");
+  $("nav.navbar   > div.container > div.collapse > ul.navbar-nav > li#aboutLi.nav-item ").removeClass("active");
+  $("nav.navbar   > div.container > div.collapse > ul.navbar-nav > li#managLi.nav-item ").removeClass("active");
+  $("nav.navbar   > div.container > div.collapse > ul.navbar-nav > li#landLi.nav-item ").removeClass("active");
+  $("nav.navbar   > div.container > div.collapse > ul.navbar-nav > li#contactLi.nav-item ").removeClass("active");
+  $("nav.navbar   > div.container > div.collapse > ul.navbar-nav > li#loginLi.nav-item ").removeClass("active");
+  console.log("ended click");
+});
+
+
+
+$("nav.navbar   > div.container > div.collapse > ul.navbar-nav > li.nav-item  > a#about.nav-link").click(function() {
+  
+  console.log("added class");
+  $("div#main > div.columnsContainer > div.leftColumn").load("about.html");
+  $("nav.navbar   > div.container > div.collapse > ul.navbar-nav > li#homeLi.nav-item ").removeClass("active");
+  $("nav.navbar   > div.container > div.collapse > ul.navbar-nav > li#aboutLi.nav-item ").addClass("active");
+  $("nav.navbar   > div.container > div.collapse > ul.navbar-nav > li#managLi.nav-item ").removeClass("active");
+  $("nav.navbar   > div.container > div.collapse > ul.navbar-nav > li#landLi.nav-item ").removeClass("active");
+  $("nav.navbar   > div.container > div.collapse > ul.navbar-nav > li#contactLi.nav-item ").removeClass("active");
+  $("nav.navbar   > div.container > div.collapse > ul.navbar-nav > li#loginLi.nav-item ").removeClass("active");
+  console.log("removed class");
+
+});
+
+
+
+$("nav.navbar   > div.container > div.collapse > ul.navbar-nav > li.nav-item  > a#manag.nav-link").click(function() {
+  
+  $("div#main > div.columnsContainer > div.leftColumn").load("management.html");
+  $("nav.navbar   > div.container > div.collapse > ul.navbar-nav > li#homeLi.nav-item ").removeClass("active");
+  $("nav.navbar   > div.container > div.collapse > ul.navbar-nav > li#aboutLi.nav-item ").removeClass("active");
+  $("nav.navbar   > div.container > div.collapse > ul.navbar-nav > li#managLi.nav-item ").addClass("active");
+  $("nav.navbar   > div.container > div.collapse > ul.navbar-nav > li#landLi.nav-item ").removeClass("active");
+  $("nav.navbar   > div.container > div.collapse > ul.navbar-nav > li#contactLi.nav-item ").removeClass("active");
+  $("nav.navbar   > div.container > div.collapse > ul.navbar-nav > li#loginLi.nav-item ").removeClass("active");
+});
+
+
+$("nav.navbar   > div.container > div.collapse > ul.navbar-nav > li.nav-item  > a#land.nav-link").click(function() {
+  
+  $("div#main > div.columnsContainer > div.leftColumn").load("land.html");
+   $("nav.navbar   > div.container > div.collapse > ul.navbar-nav > li#homeLi.nav-item ").removeClass("active");
+  $("nav.navbar   > div.container > div.collapse > ul.navbar-nav > li#aboutLi.nav-item ").removeClass("active");
+  $("nav.navbar   > div.container > div.collapse > ul.navbar-nav > li#managLi.nav-item ").removeClass("active");
+  $("nav.navbar   > div.container > div.collapse > ul.navbar-nav > li#landLi.nav-item ").addClass("active");
+  $("nav.navbar   > div.container > div.collapse > ul.navbar-nav > li#contactLi.nav-item ").removeClass("active");
+  $("nav.navbar   > div.container > div.collapse > ul.navbar-nav > li#loginLi.nav-item ").removeClass("active");
+});
+
+
+$("nav.navbar   > div.container > div.collapse > ul.navbar-nav > li.nav-item  > a#contact.nav-link").click(function() {
+  
+  $("div#main > div.columnsContainer > div.leftColumn").load("contact.html");
+   $("nav.navbar   > div.container > div.collapse > ul.navbar-nav > li#homeLi.nav-item ").removeClass("active");
+  $("nav.navbar   > div.container > div.collapse > ul.navbar-nav > li#aboutLi.nav-item ").removeClass("active");
+  $("nav.navbar   > div.container > div.collapse > ul.navbar-nav > li#managLi.nav-item ").removeClass("active");
+  $("nav.navbar   > div.container > div.collapse > ul.navbar-nav > li#landLi.nav-item ").removeClass("active");
+  $("nav.navbar   > div.container > div.collapse > ul.navbar-nav > li#contactLi.nav-item ").addClass("active");
+  $("nav.navbar   > div.container > div.collapse > ul.navbar-nav > li#loginLi.nav-item ").removeClass("active");
+});
+
+
+$("nav.navbar   > div.container > div.collapse > ul.navbar-nav > li.nav-item  > a#login.nav-link").click(function() {
+  
+  $("div#main > div.columnsContainer > div.leftColumn").load("login.html");
+   $("nav.navbar   > div.container > div.collapse > ul.navbar-nav > li#homeLi.nav-item ").removeClass("active");
+  $("nav.navbar   > div.container > div.collapse > ul.navbar-nav > li#aboutLi.nav-item ").removeClass("active");
+  $("nav.navbar   > div.container > div.collapse > ul.navbar-nav > li#managLi.nav-item ").removeClass("active");
+  $("nav.navbar   > div.container > div.collapse > ul.navbar-nav > li#landLi.nav-item ").removeClass("active");
+  $("nav.navbar   > div.container > div.collapse > ul.navbar-nav > li#contactLi.nav-item ").removeClass("active");
+  $("nav.navbar   > div.container > div.collapse > ul.navbar-nav > li#loginLi.nav-item ").addClass("active");
+});
+
+
+console.log("ended nav js ");
+
+
+
+</script>
+
+<div id="main">
+
+    
+    <div class="columnsContainer" >
+
+      <div class="leftColumn" style="overflow-y: auto;">
+        <h2>Left Column (fluid)</h2>
+        
+      </div>
+
+      <div class="rightColumn microsoft cont">
+        
+    <p class="marquee">Windows 8 and Windows RT are focused on your life—your friends and family, your apps, and your stuff. With new things like the  you can spend less time searching and more time doing.Windows 8 and Windows RT are focused on your life—your friends and family, your apps, and your stuff. With new things like the  you can spend less time searching and more time doing.Windows 8 and Windows RT are focused on your life—your friends and family, your apps, and your stuff. With new things like the  you can spend less time searching and more time doing.Windows 8 and Windows RT are focused on your life—your friends and family, your apps, and your stuff. With new things like the  you can spend less time searching and more time doing.Windows 8 and Windows RT are focused on your life—your friends and family, your apps, and your stuff. With new things like the  you can spend less time searching and more time doing.Windows 8 and Windows RT are focused on your life—your friends and family, your apps, and your stuff. With new things like the  you can spend less time searching and more time doing.Windows 8 and Windows RT are focused on your life—your friends and family, your apps, and your stuff. With new things like the  you can spend less time searching and more time doing.Windows 8 and Windows RT are focused on your life—your friends and family, your apps, and your stuff. With new things like the  you can spend less time searching and more time doing.Windows 8 and Windows RT are focused on your life—your friends and family, your apps, and your stuff. With new things like the  you can spend less time searching and more time doing.Windows 8 and Windows RT are focused on your life—your friends and family, your apps, and your stuff. With new things like the  you can spend less time searching and more time doing.Windows 8 and Windows RT are focused on your life—your friends and family, your apps, and your stuff. With new things like the  you can spend less time searching and more time doing.</p>
+
+
+      </div>
+
+    </div>
+
+
+<script type="text/javascript">
+  
+$("div#main > div.columnsContainer > div.leftColumn").load("home.html");
+</script>
+</div>
+<!-- Page Content -->
+
+
+
+<div id="info">
+<footer >
+      <section class="ft-main">
+        <div class="ft-main-item">
+          <h2 class="ft-title">Talk To Us</h2>
+          <p class="text_foot">
+            President : +91-98143-04148<br>
+            Secretary : +91-98727-17300
+            </p>
+            </div>
+
+            <div class="ft-main-item" >
+          <h2 class="ft-title">Visit Us </h2>
+          <p class="text_foot">
+            78, Adarsh Colony , Barewal Road<br>
+            Near Gurdev Hospital , Ludhiana.
+            </p>
+            </div>
+            <div class="ft-main-item">
+          <h2 class="ft-title">Email Us </h2>
+          <p class="text_foot">
+            anandvihar1314@gmail.com<br>
+            </p>
+            </div>
+
+          <div class="ft-main-item">
+          <h2 class="ft-title">Available </h2>
+          <p class="text_foot">
+            Saturday & Sunday <br>
+            </p>
+                   </div>
+
+
+
+
+      </section>
+     
+      
+     
+      <section class="ft-legal" style="text-align:center;">
+        
+        <div class="ft-legal-list" style="display:inline-block;">
+        <p class="copy">&copy;  The Ludhiana Canal View Co-Operative H. B. Society Limited, Ludhiana .
+        </p>
+        </div>
+      </section>
+    </footer> 
+     <!---->
+<div>
+
+</body>
+</html>
+
